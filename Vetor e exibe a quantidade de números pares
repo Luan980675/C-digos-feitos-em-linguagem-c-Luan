@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	int a, vetor[10], qtd;
+	for (a = 0; a < 10; a++){
+		printf("Digite o %d valor: ", a + 1);
+		scanf("%d",&vetor[a]);
+	    }
+		for(a = 0; a < 10; a++){
+			if(vetor[a] % 2 ==0){
+				qtd=a + 1;
+			}
+		}
+		printf(" A quantidade de números pares é = %d",qtd);
+	}
