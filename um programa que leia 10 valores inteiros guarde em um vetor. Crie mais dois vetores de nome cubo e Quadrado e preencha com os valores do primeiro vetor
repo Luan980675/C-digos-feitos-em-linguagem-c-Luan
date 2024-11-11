@@ -1,0 +1,17 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main (){
+	setlocale(LC_ALL,"Portuguese");
+	int vetor[10], cubo[10], quadrado[10], a;
+	for(a = 0; a < 10; a++){
+		printf("Digite o %d valor: ", a + 1);
+		scanf("%d", &vetor[a]);
+		quadrado[a] = vetor[a] * vetor[a];
+		cubo[a] = vetor[a] * vetor[a] * vetor[a];
+	}
+	printf("O valor em Quadrado e ao cubo\n");
+	for(a = 0; a < 10; a++){
+		printf("\nO valor = %d\nQuadrado = %d\n Cubo = %d", vetor[a], quadrado[a], cubo[a]);
+	}
+}
