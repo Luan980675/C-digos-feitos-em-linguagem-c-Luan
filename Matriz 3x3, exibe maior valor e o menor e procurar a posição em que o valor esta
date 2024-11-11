@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+int main(){
+	setlocale(LC_ALL,"Portuguese");
+	int matriz[3][3], i , j, maior, menor, op, cont = false;
+	do{
+	printf("\nDigite 1 para preencher a matriz\n2 para encontar o valor da matriz\n0 para sair: ");
+	scanf("%d",&op);
+	switch(op){
+		case 1:
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			printf("matriz [%d][%d]: ", i, j);
+			scanf("%d",&matriz[i][j]);
+		}
+	}
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+			maior = matriz[i][j];
+			menor = matriz[i][j];
+		}
+	}
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+				if(matriz[i][j] < menor){
+				menor = matriz[i][j];
+			  }
+			}
+		}
+	for(i = 0; i < 3; i++){
+		for(j = 0; j < 3; j++){
+				if(matriz[i][j] > maior){
+				maior = matriz[i][j];
+			}
+		  }
+		}
+		printf("O menor valor é: %d\n", menor);
+	    printf("O maior valor é: %d\n", maior);
+		cont ++;
+		break;
+		case 2:
+			int valor;
+			if( cont != 0){
+		printf("Escolha o valor a procurar: ");
+		scanf("%d",&valor);
+		for(i = 0; i < 3;i++){
+			for(j = 0; j < 3; j++){
+		if(valor == matriz[i][j]){
+		printf("Valor encontrado na posição = [%d][%d]\n",i , j);
+		cont=true;
+		 }
+	}
+ }
+ cont ? printf("Massa") : printf("Valor não encontrado!");
+}else{
+	printf("Preencha a matriz primeiro!\n");
+	}
+ }
+}while(op != 0);
+   printf("Você optou por sair");
+ 
+}
